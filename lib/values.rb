@@ -9,6 +9,9 @@ require 'pry'
 # }
 
 def get_the_values(groceries)
-  binding.pry 
-  groceries.values 
+  result = []
+  groceries.values.each do |inner_array|
+    inner_array.each {|value| result << value}
+  end 
+  result
 end
